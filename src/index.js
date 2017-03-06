@@ -37,7 +37,7 @@ if (program.commits && program.prefixes) {
 
     program.prefixes.map(function(prefix) {
       const date = utils.getMostFrequentDate(commits, prefix);
-      console.log('Top', prefix, 'Commit Date:', date);
+      console.log('Top', prefix, 'Commit Day:', date);
     });
   });
 } else {
