@@ -1,0 +1,22 @@
+{
+  "name": "@captainsafia/dossier",
+  "version": "1.0.0",
+  "description": "Generate a command line report for a git repository",
+  "main": "src/index.js",
+  "bin": {
+    "dossier": "src/index.js"
+  },
+  "keywords": [
+    "git",
+    "stats",
+    "reporting",
+    "developer experience"
+  ],
+  "author": "Safia Abdalla <safia@safia.rocks>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "git-raw-commits": "^1.1.2"
+  }
+}
