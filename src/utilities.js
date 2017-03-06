@@ -10,13 +10,13 @@ function mostFrequent(array) {
 
 function getCounts(commits, prefix) {
   return commits.filter(function(commit) {
-    return commit.subject.startsWith(prefix);
+    return commit.subject.toLowerCase().startsWith(prefix.toLowerCase());
   }).length;
 }
 
 function getMostFrequentContributor(commits, prefix) {
   const contributors = commits.filter(function(commit) {
-    return commit.subject.startsWith(prefix);
+    return commit.subject.toLowerCase().startsWith(prefix.toLowerCase());
   }).map(function(commit) {
     return commit.authorName.replace('@end@', '');
   });
@@ -24,10 +24,10 @@ function getMostFrequentContributor(commits, prefix) {
 }
 
 function getMostFrequentDate(commits, prefix) {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
     'Thursday', 'Friday', 'Saturday'];
   const dates = commits.filter(function(commit) {
-    return commit.subject.startsWith(prefix);
+    return commit.subject.toLowerCase().startsWith(prefix.toLowerCase());
   }).map(function(commit) {
     return new Date(commit.authorDate).getDay();
   });
