@@ -23,7 +23,7 @@ function getMostFrequentContributor(commits, prefix) {
   return mostFrequent(contributors);
 }
 
-function getMostFrequentDate(commits, prefix) {
+function getMostFrequentDay(commits, prefix) {
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
     'Thursday', 'Friday', 'Saturday'];
   const dates = commits.filter(function(commit) {
@@ -37,5 +37,5 @@ function getMostFrequentDate(commits, prefix) {
 module.exports = {
   getCounts,
   getMostFrequentContributor,
-  getMostFrequentDate
+  getMostFrequentDay
 };

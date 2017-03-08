@@ -5,7 +5,7 @@ commit type with a prefix. Currently, dossier generates the following statistics
 
 - Commit counts by prefix
 - Top contributor by prefix
-- Most frequent commit date by prefix
+- Most frequent commit day by prefix
 
 If you're interested in seeing more statistics reflected in dossier, you can
 submit an issue.
