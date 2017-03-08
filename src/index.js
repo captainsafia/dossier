@@ -13,13 +13,17 @@ program
   .version('1.0.0')
   .option('-c, --commits <n>', 'Number of commits to analyze', parseInt)
   .option('-p, --prefixes <l>', 'Conventional changelog prefixes used', parsePrefixes)
+  .option('-m, --maxBuffer [n]', 'Optional maxBuffer to be used in process. Defaults to 500KB. Increase if maxBuffer is exceeded', value => parseInt(value), 500)
   .parse(process.argv);
 
 if (program.commits && program.prefixes) {
   log({
     repo: process.cwd(),
     number: program.commits,
-    fields: ['authorDate', 'abbrevHash', 'hash', 'subject', 'authorName']
+    fields: ['authorDate', 'abbrevHash', 'hash', 'subject', 'authorName'],
+    execOptions: {
+      maxBuffer: 1024 * program.maxBuffer
+    }
   }, function(error, commits) {
     if (error) return console.log(colors.red(error));
 
