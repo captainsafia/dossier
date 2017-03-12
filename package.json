@@ -2,9 +2,9 @@
   "name": "@captainsafia/dossier",
   "version": "1.0.1",
   "description": "Generate a command line report for a git repository",
-  "main": "src/index.js",
+  "main": "src/utilities.js",
   "bin": {
-    "dossier": "src/index.js"
+    "dossier": "src/cli.js"
   },
   "keywords": [
     "git",
